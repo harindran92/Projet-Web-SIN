@@ -1,0 +1,40 @@
+.titre_principal
+{
+color: red ;
+}
+h1
+{
+font-size: 10.4em;
+}
+
+h1,h2,h3,ul
+{
+font-family:The Amazing Spider-Man
+
+
+}
+h1,h2,h3,ul
+{
+text-align: center;
+}
+h1
+{
+text-decoration: underline;
+}
+ul
+{
+color: #cc0505;
+}
+ h2,h3
+ {
+	color:#003ad9 ;
+ }
+ body {
+	color:rgb(96, 163, 207);
+	text-align: center;
+	background-color:white;
+	background-image:url(loadingspider.png);
+	margin:0;
+	background-size:cover;
+	font-size: 27pt;
+	}

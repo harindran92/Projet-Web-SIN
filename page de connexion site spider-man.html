@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="spdr.css" />
+<title>Authentification</title>
+<meta charset="utf-8" />
+
+<meta name="viewport" content="width=device-width, initial-
+scale=1.0" />
+
+</head>
+<body> <!-- Corps de la page -->
+    <script>
+
+       
+            document.getElementById("btnOk").style.display='none';
+       
+    </script>
+    
+        <form action="accueil.html" method="POST"> <!-- Début du
+            formulaire -->
+            <!-- Liste déroulante -->
+            <div  id="authdiv">
+            <select name="Spider-Man">
+            </select>
+            <!-- Zones de texte -->
+            <label for="nom"> Nom : </label><input type="text"
+            name="nom" id="nom" placeholder="Entrez votre nom"
+            /><br/><br/>
+            <label for="prenom">Prénom : </label><input type="text"
+            name="prenom" id="prenom" placeholder="Entrez votre prénom"
+            /><br/><br/>
+            <!-- Bouton radio -->
+            <label for="sexe">Sexe : </label>
+            <input type="radio" name="sexe" id="sexe" value="H"
+            checked /> Masculin
+            <input type="radio" name="sexe" id="sexe" value="F"
+            checked /> Féminin
+            <input type="radio" name="sexe" value="JSP" /> Autres
+            
+            
+            <br/><br/>
+            <!-- Slider -->
+            <label for="age">Age : 1 </label>
+            <input type="range" name="age" id="age" min="1" max="99"
+            step="1" value="18" /> 99
+            <br/><br/>
+            <!-- Case à cocher -->
+            <input id="jenspsman" type="checkbox" name="bDebutant" /> Je suis fan de Spider-Man<br/><br/>
+            <!-- Bouton -->
+            <input id="btnOk" type="submit" name="btOK" value="OK" style="margin-left: 50%" />  
+            
+
+        </div>
+            </form> <!-- Fin du formulaire -->
+   
+
+<script>
+
+window.onload = (event) => {
+    document.getElementById("btnOk").style.display='none';
+};
+    const authdivnode = document.getElementById('authdiv');
+    const btnoknode = document.getElementById('btnOk');
+    const checkbox = document.getElementById('jenspsman');
+
+    checkbox.addEventListener('change', (event) => {
+    if (event.currentTarget.checked) {
+        authdivnode.appendChild(btnoknode);
+        document.getElementById("btnOk").style.display='block';
+    } else {
+        authdivnode.removeChild(btnoknode)
+    }
+    });
+
+    function deblockSubmit(id_submit){ 
+        document.getElementById(id_submit).type='submit';
+    }
+     
+    function blockSubmit(id_submit){
+        document.getElementById(id_submit).type='button';
+    }
+    </script>
+    <!--coche la case, la page se recharge ne la coche pas cela ne fait rien. -->
+    </form>
+</body>
+</html>
